@@ -46,6 +46,8 @@ def main():
             except InvalidGuessedLetterException:
                 print("\t Your guess is incorrect. Please guess again.")
                 continue
+            except InvalidGuessAttempt:
+                print ("\t You already guessed that. Please guess again")
 
             if attempt.is_hit():
                 print("\tCongratulations! That's correct.")
